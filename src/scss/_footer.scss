@@ -1,0 +1,30 @@
+
+.footer {
+  border-top: 1px solid #bbb;
+  
+  &__container {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  &__left {
+
+    &-first {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__right {
+    align-self: flex-end;
+    
+    &-produced {
+      font-weight: 700;
+      color: rebeccapurple;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  }
+}

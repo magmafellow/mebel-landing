@@ -1,0 +1,58 @@
+
+
+.header {
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 24px;
+  
+  &__container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+  }
+
+  &__logo {
+    width: 39px;
+    height: 39px;
+    border-radius: 55px;
+    background-color: rebeccapurple;
+  }
+
+  &__menu {
+    flex: 1 1 auto;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: end;
+    gap: 3em;
+  }
+}
+
+.list {
+
+  &__link {
+    color: #0e0e0e;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.loginbtn {
+  background-color: blueviolet;
+  color: #fff;
+  padding: 24px 32px;
+  border-radius: 1em;
+  font-weight: 700;
+  font-size: 24px;
+  border: none;
+  transition: 0.17s;
+
+  &:hover {
+    background-color: rgb(152, 72, 226);
+    cursor: pointer;
+  }
+}

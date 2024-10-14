@@ -159,6 +159,34 @@
   }
 }
 
+@media (max-width: 449px) {
+  .header {
+    &__text-top {
+      font-size: 20px;
+    }
+    &__logobox {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 8px;
+      padding-bottom: 8px;
+    }
+  }
+  .burger {
+    width: 30px;
+  }
+}
+
+@media (max-width: 363px) {
+  .header {
+    &__text-top {
+      font-size: 18px;
+    }
+  }
+  .burger {
+    width: 25px;
+  }
+}
+
 .header.menu-active .header__menu {
   display: flex;
   align-items: center;

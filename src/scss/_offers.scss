@@ -1,0 +1,52 @@
+
+.offers {
+
+  &__container {}
+
+  &__lent {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  &__deals {
+    flex: 1 0 auto;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &__decor {
+    height: 1px;
+    width: 100%;
+    background-color: brown;
+  }
+  &__gallery {
+    display: grid;
+    column-gap: 12px;
+    row-gap: 18px;
+  }
+  &__gallery-01 {
+    grid-template-columns: 63fr 37fr;
+    grid-template-rows: 300px;
+    margin-bottom: 18px;
+  }
+  &__gallery-02 {
+    grid-template-columns: 37fr 63fr;
+    grid-template-rows: 300px;
+  }
+  &__item {
+    position: relative;
+
+    &img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    bottom: 20px;
+    left: 8px;
+  }
+}

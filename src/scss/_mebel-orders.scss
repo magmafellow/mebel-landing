@@ -1,0 +1,139 @@
+.mebel-orders {
+  margin-bottom: 30px;
+  font-size: 13px;
+
+  &__container {
+  }
+  &__lent {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 10px;
+  }
+  &__decor {
+    height: 2px;
+    width: 100%;
+    background-color: rgb(181, 157, 38);
+  }
+  &__mebel-on-order {
+    flex: 1 0 auto;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__info {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+
+  &__gallery {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 16px;
+  }
+  &__gallery-01 {
+    grid-template-columns: 55fr 45fr;
+    grid-template-rows: 300px;
+    margin-bottom: 16px;
+  }
+  &__gallery-02 {
+    grid-template-columns: 30fr 70fr;
+    grid-template-rows: 300px;
+    margin-bottom: 8px;
+  }
+  &__item {
+    position: relative;
+
+    &img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__label {
+    display: inline-block !important;
+    background-color: rgba(58, 58, 58, 0.627);
+    border: 1px solid rgba(58, 58, 58, 0.922);
+    position: absolute;
+    color: #fff;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-size: 13px;
+
+    &-01 {
+      bottom: 50px;
+      right: 50px;
+    }
+    &-02 {
+      left: 0;
+      bottom: 25px;
+    }
+    &-03 {
+      left: 20px;
+      bottom: 30px;
+    }
+    &-04 {
+      right: 30px;
+      bottom: 20px;
+    }
+  }
+
+  &__btn {
+    font-family: Roboto, sans-serif;
+    display: block;
+    font-weight: 600;
+    text-transform: lowercase;
+    width: 100%;
+    color: rgb(58, 58, 58);
+    border: 1px solid rgb(180, 180, 180);
+    padding: 6px;
+    text-align: center;
+    background-color: rgb(210, 210, 210);
+    transition: 0.17s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(182, 182, 182);
+    }
+    &:active {
+      background-color: rgb(175, 175, 175);
+    }
+  }
+}
+
+@media (max-width: 849px) {
+  .mebel-orders {
+    &__gallery {
+      grid-template-rows: 200px;
+    }
+  }
+}
+
+@media (max-width: 649px) {
+  .mebel-orders {
+    &__gallery-01 {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+    &__gallery-02 {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+
+    &__label {
+      &-04 {
+        right: 5px;
+      }
+    }
+    &__lent {
+      gap: 16px;
+    }
+  }
+}

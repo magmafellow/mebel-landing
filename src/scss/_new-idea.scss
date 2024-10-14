@@ -1,0 +1,50 @@
+
+.new-idea {
+  margin-bottom: 30px;
+  font-size: 13px;
+
+  &__title {
+    color: rgb(54, 59, 66);
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+  &__text {
+    text-align: center;
+    color: rgb(54, 59, 66);
+    margin-bottom: 16px;
+  }
+  &__btnbox {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__btn {
+    background-color: rgb(112, 112, 122);
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #fff;
+    padding: 12px 24px;
+    border: 1px solid rgb(70, 70, 70);
+    transition: 0.17s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(101, 101, 110);
+    }
+    &:active {
+      background-color: rgb(92, 92, 101);
+    }
+  }
+  
+  &__cover {
+    height: 500px;
+    
+    &img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

@@ -1,11 +1,12 @@
-
-
 .header {
   // border-bottom: 1px solid #bbb;
   background-color: rgb(58, 58, 58);
   // margin-bottom: 24px;
   color: #fff;
-  
+  overflow-x: hidden;
+  width: 100%;
+  font-size: 13px;
+
   &__container {
     height: 100px;
     display: flex;
@@ -17,12 +18,12 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 
   &__logo {
-    width: 39px;
-    height: 39px;
+    width: 60px;
+    height: 60px;
     border-radius: 55px;
     &svg {
       width: 100%;
@@ -37,7 +38,7 @@
     margin-bottom: 4px;
   }
   &__text-bottom {
-    font-size: 11px;
+    font-size: 13px;
     color: #ccc;
   }
 
@@ -63,8 +64,8 @@
 }
 
 .list {
-
   &__link {
+    font-size: 13px;
     color: #ccc;
     text-decoration: none;
     text-transform: uppercase;
@@ -72,22 +73,6 @@
     &:hover {
       text-decoration: underline;
     }
-  }
-}
-
-.loginbtn {
-  background-color: blueviolet;
-  color: #fff;
-  padding: 24px 32px;
-  border-radius: 1em;
-  font-weight: 700;
-  font-size: 24px;
-  border: none;
-  transition: 0.17s;
-
-  &:hover {
-    background-color: rgb(152, 72, 226);
-    cursor: pointer;
   }
 }
 
@@ -101,13 +86,73 @@
   width: 40px;
   height: 20px;
 
-  &__one, &__two, &__three {
+  &__one,
+  &__two,
+  &__three {
     height: 1.5px;
     width: 100%;
     background-color: #fff;
   }
 }
 
+.menu-logobox {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  display: none;
+}
+.menu-logoimgbox {
+  width: 50px;
+  height: 50px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.menu-logotextbox {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 4px;
+}
+.menu-logo-title {
+  font-size: 25px;
+  font-weight: 700;
+  color: #fff;
+}
+.menu-logo-text {
+  font-size: 13px;
+  color: rgb(194, 194, 194);
+}
+
+.menu-numberbox {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.menu-numberlist {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 16px;
+}
+.menu-number {
+  color: rgb(194, 194, 194);
+  font-size: 13px;
+}
+
+.menu-active .menu-logobox {
+  display: flex;
+}
+.menu-active .menu-numberbox {
+  display: block;
+}
 
 @media (max-width: 1219px) {
   .header {
@@ -126,20 +171,7 @@
       justify-content: space-between;
     }
     &__menu {
-      width: 100%;
-      height: 100%;
-      background-color: rgb(58, 58, 58);
-      position: absolute;
-      top: 0;
-      right: -100%;
-      transition: 0.3s;
-    }
-    &__list {
-      flex-flow: column nowrap;
-      gap: 24px;
-    }
-    .list__link {
-      font-size: 24px;
+      display: none;
     }
   }
   .burger {
@@ -173,6 +205,12 @@
   }
   .burger {
     width: 30px;
+  }
+  .menu-logobox {
+    flex-flow: column nowrap;
+  }
+  .menu-logo-text {
+    display: none;
   }
 }
 

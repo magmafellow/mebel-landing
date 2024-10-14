@@ -1,30 +1,225 @@
 
 .footer {
   border-top: 1px solid #bbb;
-  
+  background-color: rgb(58, 58, 58);
+  color: #fff;
+  font-size: 13px;
+
   &__container {
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    min-height: 100px;
     padding: 10px 0;
   }
 
-  &__left {
-
-    &-first {
-      margin-bottom: 10px;
-    }
+  &__top {
+    display: grid;
+    grid-template-columns: 25fr 75fr;
+    grid-template-rows: auto;
+    margin-bottom: 16px;
   }
 
-  &__right {
-    align-self: flex-end;
+  &__logocontainer {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  &__logotextbox {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 4px;
+  }
+  &__logo-title {
+    font-size: 25px;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+  }
+  &__logo-text {
+    font-size: 13px;
+  }
+  
+  &__logobox {
+    width: 60px;
+    height: 60px;
+  }
+  &__logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  &__services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+    align-items: start;
+    align-content: start;
+  }
+  &__service-item {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 8px;
+  }
+  &__service-textbox {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3px;
+    font-size: 13px;
+  }
+  &__service-iconbox {
+    border-radius: 99px;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+  }
+  &__service-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  &__service-title {
+    margin-bottom: 2px;
+  }
+  &__service-sep {
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 6px;
+  }
+
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  &__grid-item {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+  }
+
+  &__grid-sep {
+    height: 1px;
+    background-color: #fff;
+    width: 100%;
+  }
+  &__grid-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__grid-group {
+    margin-bottom: 30px;
+  }
+
+  &__address {
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  &__address_lowmb {
+    margin-bottom: 2px;
+  }
+  &__under-address {
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  &__valuebox {
+    font-weight: 300;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+  &__label {
+    flex: 0 0 50px;
+  }
+  &__box-value {
+    margin-bottom: 3px;
+    letter-spacing: 0.037em;
+    font-weight: 300;
+  }
+  &__box-value-link {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+}
+
+@media (max-width: 1219px) {
+  .footer {
+    &__container {
+      padding: 16px 0;
+    }
+    &__services {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      padding-left: 50px;
+    }
+    &__service-item {
+      justify-content: start;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, auto);
+    }
     
-    &-produced {
-      font-weight: 700;
-      color: rebeccapurple;
-      font-size: 14px;
-      text-transform: uppercase;
+    &__grid-item:first-child{
+      grid-column: span 2;
+    }
+    &__grid-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 4px;
+    }
+  }
+}
+
+@media (max-width: 669px) {
+  .footer {
+    &__top {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+    &__logocontainer {
+      justify-content: center;
+    }
+    &__services {
+      display: none;
+    }
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, auto);
+    }
+    &__grid-item:first-child{
+      grid-column: auto;
+    }
+    &__grid-group {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 611px) {
+  .footer {
+
+    &__grid-inner {
+      flex-flow: column nowrap;
+      text-align: center;
+    }
+    &__valuebox {
+      justify-content: center;
+      gap: 4px;
     }
   }
 }

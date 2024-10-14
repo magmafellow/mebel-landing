@@ -2,17 +2,31 @@ header.header
   div.header__container.container
     div.header__logobox
       div.header__logo
+        img.header__logosvg(src="./img/logo.svg", alt="logo")
+      div.header__textbox
+        div.header__text-top РЕЗКРОЙ
+        div.header__text-bottom Профессиональная мебельная компания
 
     nav.header__menu.menu
       ul.header__list.list
         li.list__item
-          a(href="#").list__link Home
+          a(href="#").list__link Главная
         li.list__item
-          a(href="#").list__link About
+          a(href="#").list__link О нас
         li.list__item
-          a(href="#").list__link New
+          a(href="#").list__link Услуги
         li.list__item
-          a(href="#").list__link Contacts
+          a(href="#").list__link Галерея
+        li.list__item
+          a(href="#").list__link Блог
+        li.list__item
+          a(href="#").list__link Контакты
 
-    div.header__login
-      button.loginbtn login/signup
+    div.header__numbers
+      div.header__number-01 +7(800)000-00-00
+      div.header__number-02 +7(926)999-99-99
+    
+    div.header__burger.burger
+      .burger__one
+      .burger__two
+      .burger__three

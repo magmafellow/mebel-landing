@@ -5,6 +5,10 @@
 @use '_header';
 @use '_footer';
 @use '_main';
+@use '_hero';
+@use '_lent';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
   box-sizing: border-box;
@@ -12,6 +16,9 @@
 
 html {
   font-family: Roboto, Helvetica, sans-serif;
+  color: #444;
+  font-size: 16px;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -49,14 +56,12 @@ html {
   }
 }
 
-@media (min-width: 1324px) {
+@media (min-width: 1220px) {
   .container {
-    max-width: 1324px;
+    max-width: 1220px;
   }
 }
 
-@media (min-width: 1524px) {
-  .container {
-    max-width: 1524px;
-  }
+html.lock {
+  overflow: hidden;
 }

@@ -796,6 +796,10 @@ table {
   grid-template-columns: 37fr 63fr;
   grid-template-rows: 300px;
 }
+.offers__title {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
 .offers__item {
   position: relative;
 }

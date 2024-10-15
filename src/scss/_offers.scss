@@ -36,6 +36,13 @@
     grid-template-columns: 37fr 63fr;
     grid-template-rows: 300px;
   }
+  &__title {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  &__text {
+    // font-size: 18px;
+  }
   &__item {
     position: relative;
 

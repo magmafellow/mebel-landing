@@ -4,7 +4,8 @@ const uglify = require('gulp-uglify')
 const dartSass = require('sass')
 const rename = require('gulp-rename')
 const sass = require('gulp-sass')(dartSass)
-const cssnano = require('cssnano')
+// const cssnano = require('cssnano')
+const cleanCSS = require('gulp-clean-css');
 const pug = require('gulp-pug')
 
 // plugins
@@ -24,6 +25,7 @@ function scss(cb) {
       .pipe(sass().on('error', sass.logError))
       .pipe(postcss([autoprefixer()]))
       .pipe(dest('dist/css'))
+      .pipe(cleanCSS({compatibility: 'ie8'}))
       .pipe(rename({ extname: '.min.css' }))
       .pipe(dest('dist/css/min'))
   )
